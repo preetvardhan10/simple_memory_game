@@ -12,36 +12,42 @@ body {
   display: flex;
   flex-direction: column;
 }
-  /* Header Styles */
-  .header {
-    background-color: #2c3e50;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-  }
-  
-  .header h1 {
-    margin-bottom: 0.5rem;
-  }
-  
-  .header nav {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-  }
-  
-  .header a {
-    color: white;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-  }
-  
-  .header a:hover {
-    background-color: #34495e;
-  }
-  
+
+.header {
+  background: linear-gradient(to right, #4b6cb7, #182848);
+  color: white;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.header a {
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.1);
+  font-weight: 600;
+}
+
+.header a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
   /* Home Page Styles */
   .home-page {
     max-width: 800px;
