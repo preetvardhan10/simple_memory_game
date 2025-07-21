@@ -11,7 +11,7 @@ const GameBoard = ({ level }) => {
   const [gameOver, setGameOver] = useState(false)
   const [loading, setLoading] = useState(true)
 
-  // Helper function to determine grid size
+  // function to determine grid size
   const getGridSize = () => {
     switch (level) {
       case 'easy': return 2
