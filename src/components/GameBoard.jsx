@@ -10,6 +10,8 @@ const GameBoard = ({ level }) => {
   const [attempts, setAttempts] = useState(0)
   const [gameOver, setGameOver] = useState(false)
   const [loading, setLoading] = useState(true)
+  const [resetCount, setResetCount] = useState(0);
+
 
   // function to determine grid size
   const getGridSize = () => {
@@ -56,10 +58,21 @@ const GameBoard = ({ level }) => {
     setLoading(false)
   }
 
+
+
+
+
+
+
+
   // Initialize game
   useEffect(() => {
     fetchImages()
   }, [level])
+
+
+
+
 
   // Check for game completion
   useEffect(() => {
@@ -101,6 +114,7 @@ const GameBoard = ({ level }) => {
     setGameOver(false)
     setLoading(true)
     fetchImages()
+    setResetCount(prev => prev + 1)
   }
 
   if (loading) {
@@ -116,7 +130,7 @@ const GameBoard = ({ level }) => {
   return (
     <div className="game-container">
       <div className="game-info">
-        <Timer gameOver={gameOver} />
+      <Timer gameOver={gameOver} reset={resetCount} />
         <div className="attempts">Attempts: {attempts}</div>
         <button onClick={resetGame} className="reset-btn">Reset Game</button>
       </div>
